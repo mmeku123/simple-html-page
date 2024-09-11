@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Full Width and Height Image with Borders</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body,
+            html {
+                width: calc(100%); /* Subtract the width of the borders */
+                margin: 0 auto; /* Center body content */
+            }
+
+            .image-container {
+                position: relative;
+            }
+
+            .full-width-height {
+                width: calc(100%); /* Subtract the width of the borders */
+                object-fit: cover; /* Ensures the image covers the entire container */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="image-container">
+            <img
+                src="./full-landing.png"
+                alt="Full Width Image"
+                class="full-width-height"
+            />
+        </div>
+    </body>
+</html>
